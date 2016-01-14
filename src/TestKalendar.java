@@ -8,7 +8,7 @@ public class TestKalendar {
 		Kalendar rolex = new Kalendar();
 
 		
-		rolex.mjesecJanuar();
+	
 		
 		
 
