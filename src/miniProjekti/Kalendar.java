@@ -1,3 +1,4 @@
+package miniProjekti;
 import java.util.Scanner;
 import java.awt.*;
 
