@@ -4,7 +4,7 @@ import java.awt.*;
 
 
 //Super Klasa Kalendar
-public class Kalendar {
+public class Kalendar extends KalendarReminder {
 	
 	Scanner unos = new Scanner (System.in); //Scanner objekat za unos
 	
@@ -28,7 +28,7 @@ public class Kalendar {
     
 	Kalendar() //iniciajalizacija
 	{
-		
+		createReminderFile();
 		int j;
 		for ( j = 1; j > 0; j++) // loop da se izvrsava program sve dok korisnik ne pritisne 0
 		{
@@ -66,16 +66,29 @@ public class Kalendar {
             if ((( i + d ) % 7 == 0 ) || ( i == dani[mjesecUnos] )) System.out.println(); // prebacuje u novi red
 		}	
 		
+		// izbornik opcija
 		System.out.println();
-		System.out.println("\nZa reminder 2");
-		System.out.println("Za drugi mjesec 1");
+		System.out.println("\nZa unos Remindera 1");
+		System.out.println("Za drugi mjesec 2");
+		System.out.println("Za prikaz Reminder 3");
 		System.out.println("Close 0");
 		
 		int opcija = unos.nextInt();
 		
+		// izlazi iz programa nakon svake opcije osim pcije 2 tu se ponavlja progran
 		if ( opcija == 1)
 		{
+			writeReminder();
+			break;
+		}
+		else if ( opcija == 2)
+		{
 			j++;
+		}
+		else if ( opcija == 3 )
+		{
+			readReminder();
+			break;
 		}
 		else if ( opcija == 0 )
 			break;
