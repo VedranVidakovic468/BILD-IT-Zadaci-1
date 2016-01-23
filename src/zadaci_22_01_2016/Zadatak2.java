@@ -35,9 +35,12 @@ public class Zadatak2
 		double distance;
 		// formula za izracunavanje udaljenosti 
 		//d = radius * arccos (sin(x1) X sin(x2) + cos(x1) * cos(x2) * cos(y1 - y2)) x je sirina
-		distance = rZemlje * ( Math.acos ( ( Math.sin( geoSirina1 ) * Math.sin( geoSirina2 ) ) + 
+		distance =  Math.acos ( ( Math.sin( geoSirina1 ) * Math.sin( geoSirina2 ) ) + 
 				( ( Math.cos ( geoSirina1 ) * Math.cos( geoSirina2 ) ) * 
-				( Math.cos( geoDuzina1 - geoDuzina2) ) ) ) );
+				( Math.cos( geoDuzina1 - geoDuzina2) ) ) ) ;
+		
+		distance = Math.toDegrees(distance);
+		distance = rZemlje * distance;
 		
 		DecimalFormat formatter = new DecimalFormat("#.###"); // formater decimala
 		
