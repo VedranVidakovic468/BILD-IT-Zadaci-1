@@ -14,11 +14,11 @@ public class Zadatak2
 		double geoSirina1 = 0; // geografska sirina za tacku 1
 		double geoDuzina2 = 0; // geografska duzina za tacku 2
 		double geoSirina2 = 0; // geografska sirina za tacku 2
-		double rZemlje = 6371.01; // poluprecnik zemlje
+		final double  RZEMLJE = 6371.01; // poluprecnik zemlje
 		
 		System.out.println("Unesite gerografsku duzinu tacke 1: ");
 		geoDuzina1 = unos.nextDouble(); // unos duzine tacke 1
-		geoDuzina1 = Math.toRadians(geoDuzina1); // konverzija duzine tacke 1 u radijane
+	    geoDuzina1 = Math.toRadians(geoDuzina1); // konverzija duzine tacke 1 u radijane
 		
 		System.out.println("Unesite geografsku sirinu tacke 1: ");
 		geoSirina1 = unos.nextDouble(); // unos sirina tacke 2
@@ -29,18 +29,16 @@ public class Zadatak2
 		geoDuzina2 = Math.toRadians(geoDuzina2);
 		
 		System.out.println("Unesote geografsku sirinu tacke 2");
-		geoSirina2 = unos.nextDouble(); // unos sirine 2
+		geoSirina2 = unos.nextDouble();
 		geoSirina2 = Math.toRadians(geoSirina2);
 		
 		double distance;
 		// formula za izracunavanje udaljenosti 
 		//d = radius * arccos (sin(x1) X sin(x2) + cos(x1) * cos(x2) * cos(y1 - y2)) x je sirina
-		distance =  Math.acos ( ( Math.sin( geoSirina1 ) * Math.sin( geoSirina2 ) ) + 
+		distance =  RZEMLJE * Math.acos ( ( Math.sin( geoSirina1 ) * Math.sin( geoSirina2 ) ) + 
 				( ( Math.cos ( geoSirina1 ) * Math.cos( geoSirina2 ) ) * 
-				( Math.cos( geoDuzina1 - geoDuzina2) ) ) ) ;
-		
-		distance = Math.toDegrees(distance);
-		distance = rZemlje * distance;
+				( Math.cos( geoDuzina1 - geoDuzina2) ) ) ) ; 
+	
 		
 		DecimalFormat formatter = new DecimalFormat("#.###"); // formater decimala
 		
