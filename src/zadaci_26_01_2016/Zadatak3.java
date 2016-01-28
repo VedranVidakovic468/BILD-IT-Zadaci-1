@@ -26,7 +26,7 @@ public class Zadatak3
 	public static void main(String[] args) 
 	{
 		int br = 0; // brojac za ispis 10 po liniji
-		for ( int i = 2; i < 10000; i++ ) // start od 2 jer 1 je slozen broj
+		for ( int i = 2; i < 100000; i++ ) // start od 2 jer 1 je slozen broj
 		{
 			if ( isPrime( i ) != 0 ) // pozivanje metode isPrime i ako je razlicito od 0
 			{

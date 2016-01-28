@@ -8,16 +8,16 @@ public class Craps
 	private Random roll = new Random(); // random objekat za bacanje nasumicnih brojeva
 	
 	// konstante koje predstavljaju pobjedu ili lost 
-	private final static int SNAKE_EYES = 2; 
+	private final static int SNAKE_EYES = 2; // StartCopyCode Source https://www.youtube.com/watch?v=G1Ew9z3tRt4
 	private final static int TREY = 3;		
 	private final static int SEVEN = 7;
 	private final static int ELEVEN = 11;
-	private final static int TWELVE = 12;
+	private final static int TWELVE = 12; // EndCopyCode  I Ahmed understand this code
 	
 	// niz stringa koji predstavlja stanje u igrici
 	private final static String [] gameStatus = { "Continue", "Won", "Lost" };
 	
-	public void play()
+	public void play()  // StartCopyCode Source https://www.youtube.com/watch?v=G1Ew9z3tRt4
 	{
 		int myPoint = 0; // inicjalizacija point u slucaju da igrac ne pobjedi ili izgubi
 		
@@ -79,6 +79,6 @@ public class Craps
 		// print force za ispis
 		System.out.printf( "Player rolled %d + %d = %d \n",dice1, dice2, sum );
 		return sum;
-	}
+	} //  EndCopyCode I Ahmed understand this code. Key is gameStatus controls the flow
 
 }
