@@ -9,6 +9,8 @@ public class StedniRacun
 
 	public static void main(String[] args) 
 	{
+		//ideja za ko je od source https://www.youtube.com/watch?v=T9TcAm9g0mo&list=PLFE2CE09D83EE3E28&index=23
+		//kod je modificiran da ispunjaje uslove zadatka
 		
 		Scanner unos = new Scanner(System.in); // scanner objekat
 		System.out.println("Unesit iznos mjesecne stedjne ");

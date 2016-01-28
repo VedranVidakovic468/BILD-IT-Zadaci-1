@@ -10,11 +10,12 @@ public class Novcic {
 	{
 		System.out.println("Bacamo novcic...");
 
+		//StartCopyCode source http://stackoverflow.com/questions/3342651/how-can-i-delay-a-java-program-for-a-few-seconds
 		try {
 		    Thread.sleep(1500);                 //pravimo pauzu od 1.5 sekundu.
 		} catch(InterruptedException ex) {
 		    Thread.currentThread().interrupt();
-		}
+		}//EndCopyCode I Ahmed dont understand this except that it puts the console to sleep
 			
 		String niz [] = {"Pismo", "Glava"}; //niz string Glava ili Pismo
 		int pismoBrojac = 0; //brojac Pisma

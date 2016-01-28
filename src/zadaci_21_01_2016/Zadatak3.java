@@ -13,7 +13,7 @@ public class Zadatak3
 
 	public static void main(String[] args) 
 	{
-Scanner unos = new Scanner (System.in); // Scanner objekat za unos
+		Scanner unos = new Scanner (System.in); // Scanner objekat za unos
 		
 		System.out.println("Unesite mjesec za koji zelite provjerit dane ");
 		String mjesecUnos = unos.next(); // unos mjeseca unos treba bude prva 3 slova mjeseca

@@ -5,6 +5,8 @@ import java.util.Scanner;
 public class Zadatak2 
 {
 
+	//ideja za rijesenje je source http://www.geekboots.com/java/lcm al 
+	//je kod modificiran za ispunjavanje uslova zadatka
 	public static int najveciDjelilac( int a, int b ) // metoda za najveci zajednicki djelilac vraca int
 	{
 		int maxDjelilac = 0;

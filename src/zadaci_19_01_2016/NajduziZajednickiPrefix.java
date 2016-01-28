@@ -15,6 +15,7 @@ public class NajduziZajednickiPrefix
 		System.out.println("Unesite drugi recenicu"); // unos druge recenice
 		String recenica2 = unos.nextLine();
 		
+		//StartCopyCode source http://stackoverflow.com/questions/22493246/find-the-longest-common-prefix-of-two-strings
 		String small, large;
 		
 		if ( recenica1.length() > recenica2.length() ) // projera koja recenica je duza odnosno veca
@@ -51,6 +52,6 @@ public class NajduziZajednickiPrefix
 		{
 			// stampanje recenice do najveceg zajednickog indexa
 			System.out.println("Najduzi zajednicki prefix za obe recenice je ' "+large.substring(0, index)+"'");
-		}
+		}// EndCopyCode I Ahmed understand this
 	}
 }

@@ -6,6 +6,7 @@ public class SortRows
 {
 	static Scanner unos = new Scanner(System.in);
 
+	//StartCopyCode source https://github.com/LuizGsa21/intro-to-java-10th-edition/blob/master/src/Chapter_08/Exercise_26.java
 	public static void prikaziMatricu( double [][] m ) // metoda za prikaz matrice
 	{
         for ( int i = 0; i < m.length; i++ )
@@ -17,6 +18,7 @@ public class SortRows
             System.out.println("");
         }
     }
+	
 	
     public static double[][] sortRows(double[][] m) //metoda za sortiranje matrice prima argumenat matricu double
     {
@@ -53,7 +55,7 @@ public class SortRows
     	}
     	return sortedRows;
     }
-	
+	// EndCopyCode I ahmed Understand this code
     public static void ispuniMatricu( double [][] m ) // metoda za ispis matrice
     {
     	for ( int i = 0; i < m.length; i++ )

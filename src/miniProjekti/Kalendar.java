@@ -12,6 +12,7 @@ public class Kalendar extends KalendarReminder {
 	
 	private static int mjesecUnos; //mjesecUnos je i od Mjesec niza
 	
+	// StartCopyCode source http://introcs.cs.princeton.edu/java/21function/Calendar.java.html
 	private static String[] mjesec = //Mjesec[i] = ime mjeseca za mjesecUnoos
 		{
             "",                               // prvi prazan tako da je Jan = 1;
@@ -24,7 +25,7 @@ public class Kalendar extends KalendarReminder {
    int[] dani =  // dani[i] = broj dana u mjesecu i
     	{
         0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31
-    	};
+    	}; // EndCopyCode I Ahmed understand this code
     
 	Kalendar() //iniciajalizacija
 	{
@@ -113,12 +114,14 @@ public class Kalendar extends KalendarReminder {
 	}
 	
 	//Vraca 0 za Nedelju, 1 za ponedeljak itd da bi mogli odraditi razmak
-    public static int dan(int d, int mjesecUnos, int godina) {
+    public static int dan(int d, int mjesecUnos, int godina) // StartCopyCode Source http://introcs.cs.princeton.edu/java/21function/Calendar.java.html
+    {
         int g = godina - (14 - mjesecUnos) / 12;
         int x = g + g/4 - g/100 + g/400;
         int m = mjesecUnos + 12 * ((14 - mjesecUnos) / 12) - 2;
         int D = (d + x + (31*m)/12) % 7;
-        return D;
+        return D; // I Ahmed dont understand this formula but it returns a number between 0-6
+        	// which later creates empty spaces in the code to match starting day of the week
     }
     
 	
@@ -126,7 +129,7 @@ public class Kalendar extends KalendarReminder {
 	{
 		  if  (( godina % 4 == 0 ) && ( godina % 100 != 0 )) return true;
 	        if  ( godina % 400 == 0 ) return true;
-	        return false;
+	        return false; 		//EndCopyCode I Ahmed understand this code
 	}
 	
 

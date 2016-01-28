@@ -7,7 +7,7 @@ public class ProstiBrojevi
 	{
 		int printCounter = 0; // brojac ispisa
 
-		for ( int i = start; i < end; i++ )
+		for ( int i = start; i < end; i++ ) // StartCopyCode source http://www.java-examples.com/prime-numbers-java-example
 		{
 			if ( start == 1 ) // ako je pocetak 1 izlazi iz programa jer prost broj nije jedan
 			{
@@ -32,7 +32,7 @@ public class ProstiBrojevi
 						}
 				}
 			
-		}
+		} // EndCopyCode I Ahmed understand this code
 	}
 	public static void main(String[] args)
 	{

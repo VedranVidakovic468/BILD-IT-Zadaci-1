@@ -9,6 +9,7 @@ public class Zadatak3
 
 	public static void main(String[] args) 
 	{
+		
 		// Dare classa koji ima argumenat metodu System.currentTimeMillis() i d dobije vrijednost current time
 		Date d = new Date(System.currentTimeMillis()); 
 		//Date format klasa da mozemo manipulisat formatom ispisa datuma i vremena

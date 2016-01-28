@@ -16,7 +16,7 @@ public class numberOfCharacters
 
 	public static void main(String[] args) throws IOException 
 	{
-		
+		//StartCopyCode source http://stackoverflow.com/questions/18274391/count-characters-words-and-lines-in-file
 		int charsCount = 0; //brojac charaktera
 		int wordsCount = 0; //brojac rijecih
 		int linesCount = 0; //brojac linija
@@ -52,7 +52,7 @@ public class numberOfCharacters
         System.out.println("# of lines: " + linesCount);
 
         fileScanner.close();
-		
+		//EndCopyCode I Ahmed understand this code
 				
 
 	}

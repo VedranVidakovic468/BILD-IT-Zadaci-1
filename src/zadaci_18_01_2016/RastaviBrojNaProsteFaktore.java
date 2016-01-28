@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class RastaviBrojNaProsteFaktore 
 {
+	//StartCopyCode source http://www.geeksforgeeks.org/print-all-prime-factors-of-a-given-number/
 	public static void primeFactors(int n)
 	{
 	    // Stampaj 2 sve dok se moze dijelit sa brojem 
@@ -27,7 +28,7 @@ public class RastaviBrojNaProsteFaktore
 	    if ( n > 2 )
 	    	System.out.print (n+".");
 	}
-
+	//EndCopyCode I Ahmed understand this code
 	public static void main(String[] args) 
 	{
 		

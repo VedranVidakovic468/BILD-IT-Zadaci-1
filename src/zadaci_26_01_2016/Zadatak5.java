@@ -7,6 +7,8 @@ public class Zadatak5
 
 	public static void main(String[] args) 
 	{
+		// ideja za kod je od source https://www.youtube.com/watch?v=pHxtKDENDdE
+		// al je kod modificiran da ipunjaje uslove zadatka
 		Scanner unos = new Scanner (System.in); // scanner objekat za unos
 		
 		int freq[] = new int [ 100 ]; // int niz od max 100 clanova
