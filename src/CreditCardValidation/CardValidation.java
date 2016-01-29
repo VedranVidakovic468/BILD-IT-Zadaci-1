@@ -2,18 +2,22 @@ package CreditCardValidation;
 
 public class CardValidation 
 {
-	
+	//StartCopy Code source https://github.com/krafthouse/intro-to-java-10th-edition/blob/master/src/Chapter_06/Exercise_31.java
+	//declarisanje prefixa constante
     public static final int PREFIX_VISA = 4;
     public static final int PREFIX_MASTER = 5;
     public static final int PREFIX_AMERICAN_XP = 37;
     public static final int PREFIX_DISCOVERS = 6;
 
+    //stavljanje konstanti u niz
     static int[] prefixes = new int[] {
             PREFIX_VISA, PREFIX_MASTER, PREFIX_AMERICAN_XP, PREFIX_DISCOVERS
     };
     
+    // metoda za provjeru validnost kartice
     public static boolean isValid(long number) {
 
+    	//false ako ima manje od 13 a vise od 16 brojeva
         if ( getSize( number ) > 16 || getSize( number ) < 13 )
         	{
         	return false;
@@ -101,5 +105,5 @@ public class CardValidation
         }
         return size;
     }
-	
+	//EndCopy code I ahmed understand this code
 }
