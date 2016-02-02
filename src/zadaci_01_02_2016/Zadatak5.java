@@ -43,7 +43,7 @@ public class Zadatak5
 				}
 				else // ako se ne nalazi broj iz brojevi liste u duplicates listi onda dodaj ga
 				{
-					duplicates.add(brojevi.get(j));
+					duplicates.add(brojevi.get( j ) );
 				}
 			}
 		}
