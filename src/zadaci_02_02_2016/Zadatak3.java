@@ -1,4 +1,4 @@
-package zadaci_01_03_2016;
+package zadaci_02_02_2016;
 
 import java.util.Scanner;
 
