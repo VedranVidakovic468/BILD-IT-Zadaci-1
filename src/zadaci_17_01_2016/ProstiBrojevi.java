@@ -37,7 +37,7 @@ public class ProstiBrojevi
 	public static void main(String[] args)
 	{
 		
-		prikaziProsteBrojeve(2, 50, 3);
+		prikaziProsteBrojeve(2, 121, 3);
 	}
 
 }
