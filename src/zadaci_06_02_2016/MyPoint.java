@@ -25,7 +25,8 @@ public class MyPoint
 
 	public static void main(String[] args) 
 	{
-		MyPoint pointA = new MyPoint();
+		//point pbjekti klase MyPoint
+		MyPoint pointA = new MyPoint(); // x i y su 0,0
 		MyPoint pointB = new MyPoint( 10, 30.5 );
 		
 		NumberFormat formatter = new DecimalFormat("#0.00"); 
@@ -35,7 +36,7 @@ public class MyPoint
 
 	}
 	
-	MyPoint()
+	MyPoint() // defaultni konstruktor
 	{
 		setXCoordinate( 0 );
 		setYCoordinate( 0 );
@@ -46,27 +47,27 @@ public class MyPoint
 		setXCoordinate( xValue );
 		setYCoordinate( yValue );
 	}
-	
+	//vraca double xCoordinate vrijednost
 	private double getXCoordinate()
 	{
 		return xCoordinate;
 	}
-	
+	//vraca double yCoordinate vrijednost
 	private double getYCoordinate()
 	{
 		return yCoordinate;
 	}
-	
+	//seter za xCoordinate
 	private void setXCoordinate( double xValue )
 	{
 		xCoordinate = xValue;
 	}
-	
+	// seter za yCoordinate
 	private void setYCoordinate( double yValue )
 	{
 		yCoordinate = yValue;
 	}
-	
+	//izracunavanje distance izmedju dvije razlicite coordinate
 	private double distance( MyPoint obj )
 	{
 		double result = Math.sqrt( ( ( obj.getXCoordinate() - xCoordinate) * 
@@ -74,7 +75,7 @@ public class MyPoint
 						* ( obj.getYCoordinate() - yCoordinate ) ) );
 		return result;
 	}
-	
+	//izracunavanje distance od parametara
 	private double distance( double xValue, double yValue )
 	{
 		double result = Math.sqrt( ( ( xValue - xCoordinate ) * ( ( xValue - xCoordinate ) ) ) + 
@@ -82,7 +83,7 @@ public class MyPoint
 		return result;
 	}
 	
-	
+	//promjenljive xCoordinate i yCoordinate
 	private double xCoordinate;
 	private double yCoordinate;
 
