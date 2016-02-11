@@ -27,7 +27,7 @@ public class Account
 
 	}
 	// konstruktor account bez argumenata
-	Account()
+	public Account()
 	{
 		id = 0;
 		balance = 0;
@@ -35,7 +35,7 @@ public class Account
 	}
 	
 	//inicijalizacija account klase sa prosljedjenim id number i kesom
-	Account (int idNumber, double balanceCash)
+	public Account (int idNumber, double balanceCash)
 	{
 		setId(idNumber);
 		setBalance(balanceCash);
@@ -113,4 +113,8 @@ public class Account
 	private double annualInterestRate;
 	private Date dateCreated;
 
+	public String toString()
+	{
+		return "Your balance id# is: " + getId() + " and your balance: " + getBalance();
+	}
 }
