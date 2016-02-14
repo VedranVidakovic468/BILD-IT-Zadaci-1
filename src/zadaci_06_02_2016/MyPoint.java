@@ -42,7 +42,7 @@ public class MyPoint
 		setYCoordinate( 0 );
 	}
 	
-	MyPoint( double xValue, double yValue )
+	public MyPoint( double xValue, double yValue )
 	{
 		setXCoordinate( xValue );
 		setYCoordinate( yValue );
@@ -84,7 +84,7 @@ public class MyPoint
 	}
 	
 	//promjenljive xCoordinate i yCoordinate
-	private double xCoordinate;
-	private double yCoordinate;
+	public double xCoordinate;
+	public double yCoordinate;
 
 }
