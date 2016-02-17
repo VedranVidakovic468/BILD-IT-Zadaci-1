@@ -1,7 +1,6 @@
 package zadaci_15_02_2016;
 
-import java.awt.image.ColorConvertOp;
-import java.util.Scanner;
+
 
 /*
  * (NumberFormatException) Write the bin2Dec(String binaryString) method to convert a binary string into a
@@ -16,7 +15,7 @@ public class Zadatak1
 		try
 		{
 		 System.out.println( bin2Dec( "111001" ) );
-	        // Purposely throwing an exception...
+	        // testing exception
 	    System.out.println(bin2Dec( "lafkja" ) );
 		}
 		catch ( NumberFormatException ex )
