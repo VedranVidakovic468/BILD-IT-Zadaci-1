@@ -27,7 +27,7 @@ public class Kalendar extends KalendarReminder {
         0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31
     	}; // EndCopyCode I Ahmed understand this code
     
-	Kalendar() //iniciajalizacija
+	public Kalendar() //iniciajalizacija
 	{
 		createReminderFile();
 		int j;
