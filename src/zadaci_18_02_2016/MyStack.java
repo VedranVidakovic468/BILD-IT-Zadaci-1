@@ -7,28 +7,29 @@ public class MyStack implements Cloneable
 {
 	private ArrayList< Object > list = new ArrayList<>();
 	
+	/** returns is List empty */
 	public boolean  isEmpty()
 	{
 		return list.isEmpty();
 	}
-	
+	/** return size of List */
 	public int getSize()
 	{
 		return list.size();
 	}
-	
+	/** peek stack */
 	public Object peek()
 	{
 		return list.get( getSize() - 1  );
 	}
-	
+	/** pop stack */
 	public Object pop()
 	{
 		Object o = list.get( list.size() - 1 );
 		list.remove( getSize() -1 );
 		return o;
 	}
-	
+	/** push stack */
 	public void push( Object o )
 	{
 		list.add( o );
@@ -41,6 +42,7 @@ public class MyStack implements Cloneable
 	}
 	
 	 @Override
+	 /** clone Objects */
 	protected Object clone()
 	{
 		MyStack myStack = null;
