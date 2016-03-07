@@ -2,6 +2,7 @@ package hotel_managment ;
 
 /*
  * class designed to create a object of taken services to add it to the GUI and update database
+ * author Ahmed Salkic
  */
 public class Services
 {
