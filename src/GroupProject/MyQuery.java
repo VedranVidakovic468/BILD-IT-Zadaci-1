@@ -1,7 +1,7 @@
 package GroupProject ;
 
 /*
- * Class MyQuery is designed to establish conection with MySql database 
+ * Class MyQuery is designed to establish connection with MySql database 
  * and retrieve data from its tables in ArrayList's
  */
 import java.sql.Connection ;
