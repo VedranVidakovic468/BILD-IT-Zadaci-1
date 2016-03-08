@@ -15,6 +15,7 @@ public class Services
 	private final double RESTAURANT = 20 ;
 	private final double SAUNA = 10 ;
 	private final double SINGLE_ROOM = 20 ;
+	private final double DOUBLE_ROOM = 40 ;
 
 	// no-arg konstruktor
 	public Services()
@@ -33,7 +34,7 @@ public class Services
 		sauna *= SAUNA ;
 		this.username = username ;
 
-		total = gym + cinema + pool + restaurant + sauna ;
+		total = gym + cinema + pool + restaurant + sauna   ;
 	}
 
 	/** returns total sum of all services */
