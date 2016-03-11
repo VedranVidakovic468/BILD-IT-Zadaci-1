@@ -65,7 +65,7 @@ public class MyQuery
 		return check ;
 
 	}
-	
+
 	public boolean checkGuestLogin( String userName, String password )
 	{
 		PreparedStatement statement ;
@@ -97,6 +97,32 @@ public class MyQuery
 		}
 		// return boolean
 		return check ;
+
+	}
+
+	public void insertGuest( GuestInformation obj )
+	{
+		System.out.println( 1 ) ;
+		try
+		{
+			// connecting
+			Connection conn = getConnected() ;
+			// passing query
+			String query = "INSERT INTO guest VALUES('" + obj.getName() + "','" + obj.getLastName() + "','"
+					+ obj.getGender() + "','" + obj.getSSNumber() + "'," + obj.getAge() + ",'" + obj.getRoomType()
+					+ "'," + obj.getRoomNumber() + ",'" + obj.getTime() + "','" + obj.getUserName() + "','"
+					+ obj.getPassword() + "')" ;
+			PreparedStatement preparedStmt = conn.prepareStatement( query ) ;
+			
+			// Executing query
+			preparedStmt.execute() ;
+			System.out.println( "table udpated" ) ;
+		}
+		catch ( Exception ex )
+		{
+			System.out.println( ex.getMessage() ) ;
+		}
+		// return boolean
 
 	}
 }

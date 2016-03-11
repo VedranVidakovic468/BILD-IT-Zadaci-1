@@ -1,82 +1,87 @@
 package hotel_managment ;
 
-import java.awt.GridLayout ;
 import java.awt.event.ActionEvent ;
 import java.awt.event.ActionListener ;
 
-import javax.swing.JComboBox ;
+import javax.swing.JButton ;
 import javax.swing.JFrame ;
-import javax.swing.JLabel ;
-import javax.swing.JPanel ;
-import javax.swing.JSpinner ;
-import javax.swing.JTable ;
-import javax.swing.JTextField ;
 
-/*
- *  Registruje/Prijavi korisnika u hotel (Ime, prezime, spol, broj lične karte, godine, broj i tip sobe u kojoj će korisnik da boravi, vrijeme prijave u hotel, korisničko ime i password za korisnika ... )
- */
 public class AdminPanel extends JFrame implements ActionListener
 {
+	/** displaying admin panel */
 	public AdminPanel()
 	{
-		setSize( 920, 760 ) ;
-		setLayout( new GridLayout( 1, 1 ) ) ;
-		// setting up top panel
-		topPanel = new JPanel( new GridLayout( 5, 4 ) ) ;
-		// 1st row
-		nameLabel = new JLabel( "Name:" ) ;
-		nameText = new JTextField( 20 ) ;
-		lastNameLabel = new JLabel( "Last Name:" ) ;
-		lastNameText = new JTextField( 20 ) ;
-		topPanel.add( nameLabel ) ;
-		topPanel.add( nameText ) ;
-		topPanel.add( lastNameLabel ) ;
-		topPanel.add( lastNameText ) ;
-
-		// 2nd row
-		genderLabel = new JLabel( "Gender" ) ;
-		genderText = new JTextField() ;
-		ssNumberLabel = new JLabel( "Social Security Number:" ) ;
-		ssnumberText = new JTextField() ;
-		topPanel.add( genderLabel ) ;
-		topPanel.add( genderText ) ;
-		topPanel.add( ssNumberLabel ) ;
-		topPanel.add( ssnumberText ) ;
-		add( topPanel ) ;
+		// set panel title
+		super( "Choose option" ) ;
+		getContentPane() ;
+		// set close operation
 		setDefaultCloseOperation( EXIT_ON_CLOSE ) ;
+		setLayout( null ) ; // layout is null
+		// fixed size window
+		setSize( 250, 350 ) ;
+		setResizable( false ) ;
+		setLocationRelativeTo( null ) ;
+		// parameters for register button has actionListener
+		registerButton = new JButton( "Register" ) ;
+		registerButton.setBounds( 20, 20, 200, 40 ) ;
+		registerButton.addActionListener( this ) ;
+		add( registerButton ) ;
+		// parameters for update button has actionListener
+		updateButton = new JButton( "Update" ) ;
+		updateButton.setBounds( 20, 60, 200, 40 ) ;
+		updateButton.addActionListener( this ) ;
+		add( updateButton ) ;
+		// parameters for print button has actionListener
+		printButton = new JButton( "Print receipt" ) ;
+		printButton.setBounds( 20, 100, 200, 40 ) ;
+		printButton.addActionListener( this ) ;
+		add( printButton ) ;
+		// parameters for sign out button has actionListener
+		signOutButton = new JButton( "Sign Out Guest" ) ;
+		signOutButton.setBounds( 20, 140, 200, 40 ) ;
+		signOutButton.addActionListener( this ) ;
+		add( signOutButton ) ;
+		// parameters for system info button has actionListener
+		systemInfoButton = new JButton( "System Info" ) ;
+		systemInfoButton.setBounds( 20, 180, 200, 40 ) ;
+		systemInfoButton.addActionListener( this ) ;
+		add( systemInfoButton ) ;
+		// parameters for search user button has actionListener
+		searchUsersButton = new JButton( "Search Users" ) ;
+		searchUsersButton.setBounds( 20, 220, 200, 40 ) ;
+		searchUsersButton.addActionListener( this ) ;
+		add( searchUsersButton ) ;
+		// parameters for guest Archive button has actionListener
+		guestArchiveButton = new JButton( "Guest Archive" ) ;
+		guestArchiveButton.setBounds( 20, 260, 200, 40 ) ;
+		guestArchiveButton.addActionListener( this ) ;
+		add( guestArchiveButton ) ;
+
 		setVisible( true ) ;
 	}
 
 	@Override
+	// method check which button is pressed and displays equivalent panel
 	public void actionPerformed( ActionEvent e )
 	{
-		// TODO Auto-generated method stub
+		if ( e.getSource().equals( registerButton ) )
+		{
+			RegisterPanel register = new RegisterPanel() ;
+		}
+		if ( e.getSource().equals( updateButton ))
+		{
+			UpdatePanel update = new UpdatePanel();
+		}
 
 	}
 
-	private JLabel nameLabel ;
-	private JLabel lastNameLabel ;
-	private JLabel genderLabel ;
-	private JLabel ssNumberLabel ;
+	// Declaring JButtons
+	private JButton registerButton ;
+	private JButton updateButton ;
+	private JButton printButton ;
+	private JButton signOutButton ;
+	private JButton systemInfoButton ;
+	private JButton searchUsersButton ;
+	private JButton guestArchiveButton ;
 
-	private JPanel topPanel ;
-	private JPanel bottomPanel ;
-	// Declaring TextFields
-	private JTextField nameText ;
-	private JTextField lastNameText ;
-	private JTextField genderText ;
-	private JTextField ssnumberText ;
-	private JTextField ageText ;
-	private JTextField roomText ;
-	private JTextField userNameText ;
-	private JTextField passwordText ;
-	// Declaring ComboBox to choose room type
-	private JComboBox roomType ;
-	// Declaring Spinner
-	private JSpinner time ;
-	// Declaring JTable
-	private JTable guestInfoTable ;
-
-	private String [ ] roomNames =
-	{ "Single Bed Room", "Double Bed Room" } ;
 }
